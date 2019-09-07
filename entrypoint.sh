@@ -11,4 +11,8 @@ if [ -n "$PROJECT_ID" ]; then
     firebase use --add $PROJECT_ID
 fi
 
+cd functions
+npm install
+cd ..
+
 sh -c "firebase $*"
